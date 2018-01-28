@@ -24,8 +24,8 @@ public class VirtualPetApp {
 			System.out.println();
 			System.out.println("What do you want to do with your pet?");
 
-			System.out.println("Press 1 to feed " + enterName + "food");
-			System.out.println("Press 2 to beat " + enterName + "with stick");
+			System.out.println("Press 1 to feed " + enterName + " food");
+			System.out.println("Press 2 to beat " + enterName + " with a stick");
 			System.out.println("Press 3 to play with " + enterName);
 			System.out.println("Press 4 to groom " + enterName);
 			System.out.println("Press 5 to take " + enterName + " to bathroom");
@@ -34,27 +34,27 @@ public class VirtualPetApp {
 			switch (optionsEntered) {
 			case "1": {
 				pet.feedPet();
-				System.out.println("You fed " + pet.getName() + " . ");
+				System.out.println("You fed " + enterName + ".");
 				break;
 			}
 			case "2": {
-				pet.painPet();
-				System.out.println("You beat" + pet.getName() + "with a stick. ");
+				pet.beatPet();
+				System.out.println("You beat " + enterName + " with a stick.");
 				break;
 			}
 			case "3": {
 				pet.playPet();
-				System.out.println("You played with " + pet.getName() + " . ");
+				System.out.println("You played with " + enterName + ".");
 				break;
 			}
 			case "4": {
-				pet.happinessPet();
-				System.out.println("You groomed" + pet.getName() + " . ");
+				pet.groomPet();
+				System.out.println("You groomed " + enterName + ".");
 				break;
 			}
 			case "5": {
-				pet.bathroomPet();
-				System.out.println("You took" + pet.getName() + "to the bathroom.");
+				pet.takePetToUseBathroom();
+				System.out.println("You took " + enterName + " to the bathroom.");
 
 				break;
 			}
@@ -62,6 +62,5 @@ public class VirtualPetApp {
 			}
 			pet.tick();
 		} while (true);
-
 	}
 }
